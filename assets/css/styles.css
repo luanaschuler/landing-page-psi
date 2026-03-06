@@ -316,8 +316,8 @@ img {
 .header-home-wrapper {
   position: relative;
   width: 100%;
-  min-height: 100vh;
-  max-height: 170vh;
+  min-height: 100svh;
+  max-height: 170svh;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -712,7 +712,7 @@ img {
 .help__data {
   display: grid;
   gap: 40px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
 /* CARD */
@@ -830,7 +830,7 @@ img {
   letter-spacing: 1px;
   font-size: 1.2rem;
   line-height: 1.85;
-  color: var(--off-white);
+  color: var(--white);
   text-align: justify;
 }
 
@@ -1251,9 +1251,9 @@ img {
   gap: 2rem;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 100svh;
   margin: 0;
-  backdrop-filter: blur(20px);
+  /* backdrop-filter: blur(20px); */
   position: relative;
 }
 
