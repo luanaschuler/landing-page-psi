@@ -324,6 +324,18 @@ img {
   object-fit: cover;
   object-position: center;
 
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    black 70%,
+    transparent 100%
+  );
+
+  mask-image: linear-gradient(
+    to bottom,
+    black 70%,
+    transparent 100%
+  );
+
 
   .video__background {
     position: absolute;
@@ -332,7 +344,30 @@ img {
     height: 100%;
     object-fit: cover;
     z-index: -1;
+    filter: brightness(0.8) contrast(1.1);
   }
+}
+
+.header-home-wrapper::before {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 140px;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  background: linear-gradient(
+    to bottom,
+    rgba(10,15,25,0) 0%,
+    rgba(10,15,25,0.45) 40%,
+    rgba(245,242,238,1) 100%
+  );
+
+  pointer-events: none;
+  z-index: 3;
 }
 
 .header-home-wrapper::after {
@@ -500,6 +535,10 @@ img {
     padding-top: 0;
   }
 
+  .home__container {
+    padding-bottom: 10rem;
+  }
+
 }
 
 /*=============== BUTTONS ===============*/
@@ -549,7 +588,6 @@ img {
 
 /*=============== ABOUT ME ===============*/
 .about {
-  padding: 0 5rem;
   position: relative;
   background: url("/assets/img/Quadriculado.png");
   width: 100%;
@@ -569,14 +607,20 @@ img {
   pointer-events: none;
 }
 
-.about__title {
+.about__title h2 {
   font-size: 3rem;
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
+  margin-left: 4rem;
   letter-spacing: 2px;
+  position: relative;
+  z-index: 1;
 }
 
 .about__wrapper {
   position: relative;
+  padding: 0 3rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .about__text--main {
@@ -611,15 +655,15 @@ img {
 
 .about__quote {
   margin-top: 6rem;
-  max-width: 700px;
 }
 
 .about__quote blockquote {
   font-size: 2rem;
   line-height: 1.4;
   font-style: italic;
-  color: #7f96a6;
+  color: var(--primary-blue-dark);
   position: relative;
+  align-text: justify;
 }
 
 .about__quote blockquote::before {
@@ -628,14 +672,14 @@ img {
   position: absolute;
   left: -2rem;
   top: -2rem;
-  opacity: 0.1;
+  opacity: 0.6;
 }
 
 .about__image {
   position: absolute;
-  top: 4rem;
-  right: 0;
-  width: 400px;
+  top: 3rem;
+  right: 5rem;
+  width: 500px;
 }
 
 .about__image img {
@@ -662,6 +706,7 @@ img {
 
 .help {
   padding: 60px;
+  margin-top: 4rem;
 }
 
 .help__data {
@@ -745,7 +790,7 @@ img {
 }
 
 @media (max-width: 720px) {
-  .specs__data {
+  .help__data {
     grid-template-columns: 1fr;
   }
 
@@ -797,9 +842,20 @@ img {
   align-items: center; 
 }
 
-.logo__specs img {
-  width: 20%;
+.logo__help img {
+  width: 30%;
   height: auto;
+}
+
+@media (max-width: 475px) {
+  .help__explain {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .help__subtitle {
+    font-size: 1rem;
+  }
 }
 
 /*=============== CURRICULO ===============*/
@@ -809,6 +865,20 @@ img {
   padding: 8rem 0;
   background: url("/assets/img/Quadriculado.png");
   overflow: hidden;
+}
+
+.curriculum::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    var(--body-background) 0%,
+    rgba(244,241,239,0) 15%,
+    rgba(244,241,239,0) 85%,
+    var(--body-background) 100%
+  );
+  pointer-events: none;
 }
 
 /* Shape orgânico atrás */
@@ -915,6 +985,14 @@ img {
 .curriculum__img:hover {
   transform: scale(1.04);
 }
+
+@media (max-width: 475px) {
+  .curriculum__content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
 /*=============== ABORDAGEM ===============*/
 
 .approach {
@@ -944,6 +1022,7 @@ img {
   line-height: 1.85;
   max-width: 560px;
   margin-left: 8rem; /* deslocamento estratégico */
+  text-align: justify;
 }
 .approach__secondary {
   font-size: 1rem;
@@ -974,6 +1053,27 @@ img {
 
   .approach__header h2 {
     margin-bottom: 2rem;
+  }
+
+  .approach__content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .approach__main {
+    margin-left: 0;
+  }
+
+  .approach__secondary {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 475px) {
+
+  .approach__header h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
   }
 
   .approach__content {
@@ -1154,6 +1254,21 @@ img {
   min-height: 100vh;
   margin: 0;
   backdrop-filter: blur(20px);
+  position: relative;
+}
+
+.faq__container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    var(--body-background) 0%,
+    rgba(244,241,239,0) 15%,
+    rgba(244,241,239,0) 85%,
+    var(--body-background) 100%
+  );
+  pointer-events: none;
 }
 
 .accordion {
@@ -1167,6 +1282,8 @@ img {
   border: 1px solid rgba(255, 255, 255, 0.3);
   overflow: hidden;
   gap: 3rem;
+  position: relative;
+  z-index: 1;
 }
 
 .accordion-item {
