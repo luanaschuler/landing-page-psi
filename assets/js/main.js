@@ -97,9 +97,9 @@ const sr = ScrollReveal({
   // reset: true
 });
 
-sr.reveal(`.home__header, .section__title`, { delay: 600 });
+sr.reveal(`.home__header, .section__title`, { delay: 400 });
 sr.reveal(`.home__footer`, { delay: 700 });
-sr.reveal(`.home__img`, { delay: 900, origin: "top" });
+sr.reveal(`.home__img`, { delay: 600, origin: "top" });
 
 sr.reveal(
   `.about__img, .products__card, .footer__logo, .footer__content, .footer__copy`,
@@ -153,32 +153,26 @@ document.querySelectorAll(".accordion-header").forEach((header) => {
   });
 });
 
-// const testimonials = document.querySelectorAll(".testimonial-card");
-// const nextBtn = document.querySelector(".next");
-// const prevBtn = document.querySelector(".prev");
-// let index = 0;
+/*=============== SCROLL REVEAL ANIMATION ===============*/
 
-// function showTestimonial(i) {
-//   testimonials.forEach((card, idx) => {
-//     card.classList.toggle("active", idx === i);
-//   });
-// }
+const timeline = document.querySelector(".approach__timeline");
+const progress = document.querySelector(".approach__progress");
 
-// nextBtn.addEventListener("click", () => {
-//   index = (index + 1) % testimonials.length;
-//   showTestimonial(index);
-// });
+window.addEventListener("scroll", () => {
+  const rect = timeline.getBoundingClientRect();
+  const windowHeight = window.innerHeight;
 
-// prevBtn.addEventListener("click", () => {
-//   index = (index - 1 + testimonials.length) % testimonials.length;
-//   showTestimonial(index);
-// });
+  const visible = Math.min(
+    Math.max((windowHeight - rect.top) / (rect.height + windowHeight), 0),
+    1,
+  );
 
-// // autoplay suave a cada 7s
-// setInterval(() => {
-//   index = (index + 1) % testimonials.length;
-//   showTestimonial(index);
-// }, 5000);
+  if (window.innerWidth <= 768) {
+    progress.style.height = visible * 100 + "%";
+  } else {
+    progress.style.width = visible * 100 + "%";
+  }
+});
 
 /*=============== FLIP CARDS ===============*/
 
