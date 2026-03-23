@@ -45,7 +45,7 @@
         <div class="header-home-wrapper">
         
             <!-- VIDEO -->
-            <video class="video__background" autoplay muted loop playsinline>
+            <video class="video__background" autoplay muted loop playsinline preload="none">
                 <source src="assets/img/19182135-hd_1080_1920_30fps.mp4" type="video/mp4">
             </video>
         
@@ -89,7 +89,6 @@
             <!-- HERO -->
             <section class="home__section" id="home">
                 <div class="home__container container">
-                    <section class="home__section" id="home">
                         <div class="home__container container">
                             <div class="home__data">
                                 <div class="home__img-container">
@@ -169,12 +168,12 @@
                     <h4 class="help__subtitle">A psicoterapia possibilita a identificação e o enfrentamento de desafios emocionais e comportamentais, buscando alcançar equilíbrio emocional uma vida satisfatória. Durante nossas sessões, podemos abordar diversas questões, tais como:</h4>
             </div>
 
-            <div class="specs__container container grid">
+            <div class="container grid">
                     <div class="help__data">
                         <div class="card">
                             <div class="card__inner">
                                 <div class="card__front">
-                                    <img src="assets/img/bipo.png" alt="">
+                                    <img src="assets/img/Group 102.png" alt="bipolar card">
                                 </div>
                                 <div class="card__back">
                                     <h3>Transtorno Bipolar</h3>
@@ -186,7 +185,7 @@
                         <div class="card">
                             <div class="card__inner">
                                 <div class="card__front">
-                                    <img src="assets/img/anxiety.png" alt="">
+                                    <img src="assets/img/Group 97.png" alt="ansiedade card">
                                 </div>
                                 <div class="card__back">
                                     <h3>Ansiedade</h3>
@@ -198,7 +197,7 @@
                         <div class="card">
                             <div class="card__inner">
                                 <div class="card__front">
-                                    <img src="assets/img/atencao.png" alt="">
+                                    <img src="assets/img/Group 76.png" alt="TDAH card">
                                 </div>
                                 <div class="card__back">
                                     <h3>TDAH / Falta de motivação</h3>
@@ -210,7 +209,7 @@
                         <div class="card">
                             <div class="card__inner">
                                 <div class="card__front">
-                                    <img src="assets/img/autoesti.png" alt="">
+                                    <img src="assets/img/Group 99.png" alt="Baixa Autoestima card">
                                 </div>
                                 <div class="card__back">
                                     <h3>Baixa Autoestima</h3>
@@ -222,7 +221,7 @@
                         <div class="card">
                             <div class="card__inner">
                                 <div class="card__front">
-                                    <img src="assets/img/trauma.png" alt="">
+                                    <img src="assets/img/Group 67.png" alt="Traumas card">
                                 </div>
                                 <div class="card__back">
                                     <h3>Traumas</h3>
@@ -234,7 +233,7 @@
                         <div class="card">
                             <div class="card__inner">
                                 <div class="card__front">
-                                    <img src="assets/img/fear.png" alt="">
+                                    <img src="assets/img/Group 101.png" alt="">
                                 </div>
                                 <div class="card__back">
                                     <h3>Medos / Fobias</h3>
@@ -391,30 +390,25 @@
                 </div>
 
                 <!--Link para mais avaliações -->
-                     <div class="text-center mt-4">
-                        <a href="https://maps.app.goo.gl/fg8TTH5hiDWhn9Hg7" class="btn btn-outline-primary"
-                            target="_blank">
-                            <i class="bi bi-google"></i>
-                            Ver mais avaliações no Google
-                        </a>
-                    </div>
-                <!-- </div>
-            </div> -->
+                <div class="reviews-link-container">
+                    <a href="https://maps.app.goo.gl/fg8TTH5hiDWhn9Hg7" class="reviews-link-button" target="_blank">
+                        <i class="bi bi-google"></i>
+                        Ver mais avaliações no Google
+                    </a>
+                </div>
 
-            <!-- Redes sociais -->
-            <div class="row mt-5">
-                <div class="col-12 text-center">
-                    <h4 class="social-title">Me encontre nas redes sociais para conteúdos sobre saúde mental e bem-estar
-                    </h4>
-                    <div class="social-networks">
-                        <a href="https://www.instagram.com/psi.barbaracardoso/" class="social-network-link instagram"
-                            target="_blank">
-                            <i class="bi bi-instagram"></i>
-                            <span>@psi.barbaracardoso</span>
-                        </a>
+                <!-- Redes sociais -->
+                <div class="social-media-section">
+                    <div class="social-media-content">
+                        <h4 class="social-title">Me encontre nas redes sociais para conteúdos sobre saúde mental e bem-estar</h4>
+                        <div class="social-networks">
+                            <a href="https://www.instagram.com/psi.barbaracardoso/" class="social-network-link instagram" target="_blank">
+                                <i class="bi bi-instagram"></i>
+                                <span>@psi.barbaracardoso</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
         </section>  
 
         <!--=============== FAQ ===============-->
@@ -516,11 +510,10 @@
         </main>
 
         <!--=============== FOOTER ===============-->
-        <!-- Footer -->
-        <footer class="footer-section py-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 mb-4">
+        <footer class="footer-section">
+            <div class="footer-container">
+                <div class="footer-content">
+                    <div class="footer-column">
                         <div class="footer-brand">
                             <img src="./assets/img/logo-branca.png" alt="Bárbara Cardoso" class="footer-logo">
                             <p class="footer-description">
@@ -530,19 +523,19 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-4 mb-4">
+                    <div class="footer-column">
                         <h5 class="footer-title">Contato</h5>
                         <div class="footer-contact">
-                            <p><a href="https://wa.me/5547991234567" class="button button--flex" target="_blank">
-                                <i class="ri-whatsapp-line button__icon"></i> Entre em contato
-                            </a></p>
+                            <a href="https://wa.me/5547991234567" class="footer-contact-link" target="_blank">
+                                <i class="ri-whatsapp-line"></i> Entre em contato
+                            </a>
                         </div>
                     </div>
 
-                    <div class="col-lg-4 mb-4">
+                    <div class="footer-column">
                         <h5 class="footer-title">Me encontre também nas redes sociais</h5>
-                        <div class="social-links">
-                            <a href="https://www.instagram.com/psi.barbaracardoso/" class="social-link" aria-label="Instagram">
+                        <div class="footer-social-links">
+                            <a href="https://www.instagram.com/psi.barbaracardoso/" class="footer-social-link" aria-label="Instagram">
                                 <i class="bi bi-instagram"></i> 
                             </a>
                         </div>
@@ -550,12 +543,8 @@
                 </div>
 
                 <!-- Footer Bottom -->
-                <div class="footer-bottom mt-4">
-                    <div class="row">
-                        <div class="col-12">
-                            <p>&copy; 2026 Bárbara Cardoso - Psicóloga Clínica. Todos os direitos reservados.</p>
-                        </div>
-                    </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Bárbara Cardoso - Psicóloga Clínica. Todos os direitos reservados.</p>
                 </div>
             </div>
         </footer>
