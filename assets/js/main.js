@@ -22,25 +22,16 @@ if (navClose) {
 
 /*=============== REMOVE MENU MOBILE ===============*/
 
-const navLink = document.querySelectorAll(".nav__link");
+const navLinks = document.querySelectorAll(".nav__link");
 
 function linkAction() {
   const navMenu = document.getElementById("nav-menu");
-  // When we click on each nav__link, we remove the show-menu class
-  navMenu.classList.remove("show-menu");
+  if (navMenu) navMenu.classList.remove("show-menu");
 }
-navLink.forEach((n) => n.addEventListener("click", linkAction));
-
-const navLinks = document.querySelectorAll(".nav__link");
-
-navLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    navMenu.classList.remove("show-menu");
-  });
-});
+navLinks.forEach((link) => link.addEventListener("click", linkAction));
 
 document.addEventListener("click", (e) => {
-  if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
+  if (navMenu && navToggle && !navMenu.contains(e.target) && !navToggle.contains(e.target)) {
     navMenu.classList.remove("show-menu");
   }
 });
@@ -101,17 +92,9 @@ sr.reveal(`.home__header, .section__title`, { delay: 400 });
 sr.reveal(`.home__footer`, { delay: 700 });
 sr.reveal(`.home__img`, { delay: 600, origin: "top" });
 
-sr.reveal(
-  `.about__img, .products__card, .footer__logo, .footer__content, .footer__copy`,
-  { origin: "top", interval: 100 },
-);
-sr.reveal(`.specs__data, discount__animate`, {
-  origin: "left",
-  interval: 100,
-});
-sr.reveal(`.specs__img, .discount__img`, { origin: "right" });
-sr.reveal(`.case__img`, { origin: "top" });
-sr.reveal(`.case__data`);
+sr.reveal(`.about__image, .about__text--main`, { origin: "top", interval: 100 });
+sr.reveal(`.card`, { origin: "bottom", interval: 80 });
+sr.reveal(`.curriculum__content`, { origin: "left", interval: 100 });
 
 /*================= CAROUSEL ======================*/
 
@@ -159,6 +142,7 @@ const timeline = document.querySelector(".approach__timeline");
 const progress = document.querySelector(".approach__progress");
 
 window.addEventListener("scroll", () => {
+  if (!timeline || !progress) return;
   const rect = timeline.getBoundingClientRect();
   const windowHeight = window.innerHeight;
 
@@ -193,6 +177,28 @@ cards.forEach((card) => {
 document.addEventListener("click", function () {
   cards.forEach((c) => c.classList.remove("flipped"));
 });
+
+/* Mobile hint: briefly half-flip cards when entering viewport */
+if (window.matchMedia("(max-width: 1023px)").matches) {
+  const hintObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const card = entry.target;
+        if (card.dataset.hintShown === "true") return;
+
+        card.dataset.hintShown = "true";
+        card.classList.add("card--hint");
+        setTimeout(() => {
+          card.classList.remove("card--hint");
+        }, 1100);
+      });
+    },
+    { threshold: 0.4 },
+  );
+
+  cards.forEach((card) => hintObserver.observe(card));
+}
 /*=============== carosel ===============*/
 
 
@@ -211,8 +217,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let autoplayInterval;
 
   function getItemsPerView() {
-    if (window.innerWidth <= 768) return 1;
-    if (window.innerWidth <= 1024) return 2;
+    if (window.innerWidth < 1024) return 1;
     return 3;
   }
 
