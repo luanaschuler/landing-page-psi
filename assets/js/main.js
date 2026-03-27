@@ -7,8 +7,10 @@ const navMenu = document.getElementById("nav-menu"),
 /*=============== MENU SHOW ===============*/
 /* VALIDATE IF CONSTANT EXISTS */
 if (navToggle) {
-  navToggle.addEventListener("click", () => {
-    navMenu.classList.add("show-menu");
+  navToggle.addEventListener("click", (e) => {
+    e.stopPropagation();
+    if (!navMenu) return;
+    navMenu.classList.toggle("show-menu");
   });
 }
 /*=============== MENU HIDDEN ===============*/
@@ -82,44 +84,61 @@ window.addEventListener("scroll", scrollActive);
 /*=============== SCROLL REVEAL ANIMATION ===============*/
 
 const sr = ScrollReveal({
-  distance: "60px",
-  duration: 2500,
-  delay: 400,
+  distance: "28px",
+  duration: 900,
+  delay: 90,
   // reset: true
 });
 
-sr.reveal(`.home__header, .section__title`, { delay: 400 });
-sr.reveal(`.home__footer`, { delay: 700 });
-sr.reveal(`.home__img`, { delay: 600, origin: "top" });
+sr.reveal(`.home__header`, { delay: 80, origin: "top" });
+sr.reveal(`.home__footer`, { delay: 120, origin: "bottom" });
+sr.reveal(`.home__img-container`, { delay: 120, origin: "top" });
 
-sr.reveal(`.about__image, .about__text--main`, { origin: "top", interval: 100 });
-sr.reveal(`.card`, { origin: "bottom", interval: 80 });
-sr.reveal(`.curriculum__content`, { origin: "left", interval: 100 });
+sr.reveal(`.about__image`, { delay: 120, origin: "top" });
+sr.reveal(`.about__text--main, .about__text--secondary, .about__text--thirth`, { delay: 120, origin: "bottom", interval: 70 });
+
+sr.reveal(`.help__explain`, { delay: 120, origin: "top" });
+sr.reveal(`.help__data .card`, { delay: 90, origin: "bottom", interval: 60 });
+
+sr.reveal(`.curriculum__content`, { delay: 120, origin: "left", interval: 70 });
+
+sr.reveal(`.approach__header`, { delay: 80, origin: "top" });
+sr.reveal(`.approach__main, .approach__secondary`, { delay: 110, origin: "bottom" });
+
+sr.reveal(`.testimonials-section`, { delay: 120, origin: "bottom" });
+sr.reveal(`.faq__container`, { delay: 90, origin: "bottom" });
+sr.reveal(`.footer-section`, { delay: 120, origin: "bottom" });
 
 /*================= CAROUSEL ======================*/
 
-var TrandingSlider = new Swiper(".tranding-slider", {
-  effect: "coverflow",
-  grabCursor: true,
-  centeredSlides: true,
-  loop: true,
-  spaceBetween: 10,
-  slidesPerView: "auto",
-  coverflowEffect: {
-    rotate: 0,
-    stretch: 0,
-    depth: 100,
-    modifier: 2.5,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
+// Swiper removed (not used on this page). Guard remains to avoid runtime errors.
+if (typeof Swiper !== "undefined") {
+  const trandingEl = document.querySelector(".tranding-slider");
+  if (trandingEl) {
+    var TrandingSlider = new Swiper(".tranding-slider", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      loop: true,
+      spaceBetween: 10,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 100,
+        modifier: 2.5,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  }
+}
 
 // =============== FAQ ACCORDION ===============
 document.querySelectorAll(".accordion-header").forEach((header) => {
@@ -185,9 +204,7 @@ if (window.matchMedia("(max-width: 1023px)").matches) {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
         const card = entry.target;
-        if (card.dataset.hintShown === "true") return;
-
-        card.dataset.hintShown = "true";
+        if (card.classList.contains("card--hint")) return;
         card.classList.add("card--hint");
         setTimeout(() => {
           card.classList.remove("card--hint");
@@ -198,6 +215,22 @@ if (window.matchMedia("(max-width: 1023px)").matches) {
   );
 
   cards.forEach((card) => hintObserver.observe(card));
+}
+
+/* Auto-open FAQ first item when the section enters view */
+const firstFaqItem = document.querySelector(".accordion-item:first-child");
+if (firstFaqItem) {
+  const faqObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        firstFaqItem.classList.add("active");
+        faqObserver.disconnect();
+      });
+    },
+    { threshold: 0.25, rootMargin: "0px 0px -10% 0px" },
+  );
+  faqObserver.observe(firstFaqItem);
 }
 /*=============== carosel ===============*/
 
