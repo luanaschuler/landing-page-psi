@@ -346,10 +346,6 @@ document.addEventListener("DOMContentLoaded", function () {
     if (endX - startX > 50) prevSlide();
   });
 
-  // window.addEventListener('resize', () => {
-  //   location.reload(); // reinicia corretamente
-  // });
-
   setupInfiniteLoop();
   startAutoplay();
 
