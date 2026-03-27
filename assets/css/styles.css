@@ -1916,8 +1916,8 @@ img {
 }
 
 .footer-logo {
-  width: 120px;
-  max-width: 120px;
+  width: 200px;
+  max-width: 200px;
   height: auto;
 }
 
@@ -2050,7 +2050,7 @@ img {
   }
 
   .footer-logo {
-    width: 150px;
-    max-width: 150px;
+    width: 200px;
+    max-width: 200px;
   }
 }
