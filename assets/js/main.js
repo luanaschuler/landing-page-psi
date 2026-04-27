@@ -33,7 +33,12 @@ function linkAction() {
 navLinks.forEach((link) => link.addEventListener("click", linkAction));
 
 document.addEventListener("click", (e) => {
-  if (navMenu && navToggle && !navMenu.contains(e.target) && !navToggle.contains(e.target)) {
+  if (
+    navMenu &&
+    navToggle &&
+    !navMenu.contains(e.target) &&
+    !navToggle.contains(e.target)
+  ) {
     navMenu.classList.remove("show-menu");
   }
 });
@@ -95,7 +100,11 @@ sr.reveal(`.home__footer`, { delay: 120, origin: "bottom" });
 sr.reveal(`.home__img-container`, { delay: 120, origin: "top" });
 
 sr.reveal(`.about__image`, { delay: 120, origin: "top" });
-sr.reveal(`.about__text--main, .about__text--secondary, .about__text--thirth`, { delay: 120, origin: "bottom", interval: 70 });
+sr.reveal(`.about__text--main, .about__text--secondary, .about__text--thirth`, {
+  delay: 120,
+  origin: "bottom",
+  interval: 70,
+});
 
 sr.reveal(`.help__explain`, { delay: 120, origin: "top" });
 sr.reveal(`.help__data .card`, { delay: 90, origin: "bottom", interval: 60 });
@@ -103,7 +112,10 @@ sr.reveal(`.help__data .card`, { delay: 90, origin: "bottom", interval: 60 });
 sr.reveal(`.curriculum__content`, { delay: 120, origin: "left", interval: 70 });
 
 sr.reveal(`.approach__header`, { delay: 80, origin: "top" });
-sr.reveal(`.approach__main, .approach__secondary`, { delay: 110, origin: "bottom" });
+sr.reveal(`.approach__main, .approach__secondary`, {
+  delay: 110,
+  origin: "bottom",
+});
 
 sr.reveal(`.testimonials-section`, { delay: 120, origin: "bottom" });
 sr.reveal(`.faq__container`, { delay: 90, origin: "bottom" });
@@ -234,14 +246,11 @@ if (firstFaqItem) {
 }
 /*=============== carosel ===============*/
 
-
-
 document.addEventListener("DOMContentLoaded", function () {
-
-  const track = document.querySelector('.carousel-track');
-  let reviewItems = document.querySelectorAll('.review-item');
-  const nextBtn = document.querySelector('.next');
-  const prevBtn = document.querySelector('.prev');
+  const track = document.querySelector(".carousel-track");
+  let reviewItems = document.querySelectorAll(".review-item");
+  const nextBtn = document.querySelector(".next");
+  const prevBtn = document.querySelector(".prev");
 
   if (!track || reviewItems.length === 0) return;
 
@@ -256,18 +265,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
   /* ===== CLONAR PARA LOOP INFINITO ===== */
   function setupInfiniteLoop() {
-
     itemsPerView = getItemsPerView();
 
-    const items = Array.from(document.querySelectorAll('.review-item'));
+    const items = Array.from(document.querySelectorAll(".review-item"));
 
-    const firstClones = items.slice(0, itemsPerView).map(item => item.cloneNode(true));
-    const lastClones = items.slice(-itemsPerView).map(item => item.cloneNode(true));
+    const firstClones = items
+      .slice(0, itemsPerView)
+      .map((item) => item.cloneNode(true));
+    const lastClones = items
+      .slice(-itemsPerView)
+      .map((item) => item.cloneNode(true));
 
-    firstClones.forEach(clone => track.appendChild(clone));
-    lastClones.reverse().forEach(clone => track.insertBefore(clone, track.firstChild));
+    firstClones.forEach((clone) => track.appendChild(clone));
+    lastClones
+      .reverse()
+      .forEach((clone) => track.insertBefore(clone, track.firstChild));
 
-    reviewItems = document.querySelectorAll('.review-item');
+    reviewItems = document.querySelectorAll(".review-item");
 
     index = itemsPerView;
     moveCarousel(false);
@@ -304,22 +318,20 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   /* ===== CORRIGE QUANDO ENTRA NO CLONE ===== */
-  track.addEventListener('transitionend', () => {
-
+  track.addEventListener("transitionend", () => {
     if (index >= reviewItems.length - itemsPerView) {
       index = itemsPerView;
       moveCarousel(false);
     }
 
     if (index < itemsPerView) {
-      index = reviewItems.length - (itemsPerView * 2);
+      index = reviewItems.length - itemsPerView * 2;
       moveCarousel(false);
     }
-
   });
 
-  nextBtn?.addEventListener('click', nextSlide);
-  prevBtn?.addEventListener('click', prevSlide);
+  nextBtn?.addEventListener("click", nextSlide);
+  prevBtn?.addEventListener("click", prevSlide);
 
   /* AUTOPLAY */
   function startAutoplay() {
@@ -330,17 +342,17 @@ document.addEventListener("DOMContentLoaded", function () {
     clearInterval(autoplayInterval);
   }
 
-  track.addEventListener('mouseenter', stopAutoplay);
-  track.addEventListener('mouseleave', startAutoplay);
+  track.addEventListener("mouseenter", stopAutoplay);
+  track.addEventListener("mouseleave", startAutoplay);
 
   /* SWIPE */
   let startX = 0;
 
-  track.addEventListener('touchstart', e => {
+  track.addEventListener("touchstart", (e) => {
     startX = e.touches[0].clientX;
   });
 
-  track.addEventListener('touchend', e => {
+  track.addEventListener("touchend", (e) => {
     let endX = e.changedTouches[0].clientX;
     if (startX - endX > 50) nextSlide();
     if (endX - startX > 50) prevSlide();
@@ -348,6 +360,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
   setupInfiniteLoop();
   startAutoplay();
-
 });
 
+/*=============== BOOK CAROUSEL ===============*/
+
+const bookCarousel = document.querySelector(".book__carousel");
+
+if (bookCarousel) {
+  const slides = document.querySelectorAll(".book__carousel-slide");
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      if (i === index) {
+        slide.classList.add("active");
+      } else {
+        slide.classList.remove("active");
+      }
+    });
+  }
+
+  function nextBookSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  // Initialize with first slide
+  showSlide(0);
+
+  // Auto-cycle every 2 seconds
+  setInterval(nextBookSlide, 2000);
+}

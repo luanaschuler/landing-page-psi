@@ -1,560 +1,846 @@
-<!DOCTYPE html>
-    <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="description"
-        content="Bárbara Cardoso - Psicóloga Clínica CRP 12/20508. Atendimento online e presencial para adultos. Especialista em ansiedade, depressão, transtorno bipolar, traumas e mais.">
-        <meta name="keywords"
-        content="psicóloga, terapia, ansiedade, depressão, Blumenau, atendimento online, psicologia clínica">
-        <meta name="author" content="Bárbara Cardoso">
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta
+      name="description"
+      content="Bárbara Cardoso - Psicóloga Clínica CRP 12/20508. Atendimento online e presencial para adultos. Especialista em ansiedade, depressão, transtorno bipolar, traumas e mais."
+    />
+    <meta
+      name="keywords"
+      content="psicóloga, terapia, ansiedade, depressão, Blumenau, atendimento online, psicologia clínica"
+    />
+    <meta name="author" content="Bárbara Cardoso" />
 
-        <!-- Open Graph / Facebook -->
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="https://barbaracardosopsicologa.com/">
-        <meta property="og:title" content="Bárbara Cardoso - Psicóloga Clínica">
-        <meta property="og:description"
-            content="Te ajudo a ter uma vida com mais leveza, de forma autônoma, divertida e acolhedora.">
-        <meta property="og:image" content="./assets/img/barbara-cardoso-og.jpg">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://barbaracardosopsicologa.com/" />
+    <meta property="og:title" content="Bárbara Cardoso - Psicóloga Clínica" />
+    <meta
+      property="og:description"
+      content="Te ajudo a ter uma vida com mais leveza, de forma autônoma, divertida e acolhedora."
+    />
+    <meta property="og:image" content="./assets/img/barbara-cardoso-og.jpg" />
 
-        <!-- Twitter -->
-        <meta property="twitter:card" content="summary_large_image">
-        <meta property="twitter:url" content="https://barbaracardosopsicologa.com/">
-        <meta property="twitter:title" content="Bárbara Cardoso - Psicóloga Clínica">
-        <meta property="twitter:description"
-            content="Te ajudo a ter uma vida com mais leveza, de forma autônoma, divertida e acolhedora.">
-        <meta property="twitter:image" content="./assets/img/barbara-cardoso-og.jpg">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://barbaracardosopsicologa.com/"
+    />
+    <meta
+      property="twitter:title"
+      content="Bárbara Cardoso - Psicóloga Clínica"
+    />
+    <meta
+      property="twitter:description"
+      content="Te ajudo a ter uma vida com mais leveza, de forma autônoma, divertida e acolhedora."
+    />
+    <meta
+      property="twitter:image"
+      content="./assets/img/barbara-cardoso-og.jpg"
+    />
 
-        <!--=============== FAVICON ===============-->
-        <link rel="shortcut icon" href="assets/img/logo-branca.png" type="image/png">
+    <!--=============== FAVICON ===============-->
+    <link
+      rel="shortcut icon"
+      href="assets/img/Favicon-02.png"
+      type="image/png"
+    />
 
-        <!--=============== REMIX ICONS ===============-->
-        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-        
+    <!--=============== REMIX ICONS ===============-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
 
-        <!--=============== CSS ===============-->
-        <link rel="stylesheet" href="assets/css/styles.css">
-        <!-- Swiper removed (not used in this page) -->
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <!-- Swiper removed (not used in this page) -->
 
-        <title>Bárbara Cardoso - Psicóloga Clínica | CRP 12/20508</title>
-    </head>
+    <title>Bárbara Cardoso - Psicóloga Clínica | CRP 12/20508</title>
+  </head>
 
-    <body>
+  <body>
+    <!-- HEADER + HERO + VIDEO -->
+    <div class="header-home-wrapper">
+      <!-- VIDEO -->
+      <video
+        class="video__background"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="none"
+      >
+        <source
+          src="assets/img/19182135-hd_1080_1920_30fps.mp4"
+          type="video/mp4"
+        />
+      </video>
 
-        <!-- HEADER + HERO + VIDEO -->
-        <div class="header-home-wrapper">
-        
-            <!-- VIDEO -->
-            <video class="video__background" autoplay muted loop playsinline preload="none">
-                <source src="assets/img/19182135-hd_1080_1920_30fps.mp4" type="video/mp4">
-            </video>
-        
-            <!-- HEADER -->
-            <header class="header" id="header">
-                <nav class="nav container">
-                    <a href="#" class="nav__logo">
-                        <img src="assets/img/logo-branca.png" alt="logo-nova">
-                    </a>
-    
-                    <div class="nav__menu" id="nav-menu">
-                        <ul class="nav__list">
-                            <li class="nav__item">
-                                <a href="#sobre" class="nav__link">Sobre mim</a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="#ajudar" class="nav__link">Como posso te ajudar?</a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="#depoimentos" class="nav__link">Depoimentos</a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="#faq" class="nav__link">FAQ</a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="https://wa.me/554797449114" class="button_nav button--flex" target="_blank">
-                                    <i class="ri-whatsapp-line button__icon"></i> Entre em contato
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="nav__close" id="nav-close">
-                            <i class="ri-close-line"></i>
-                        </div>
-                    </div>
-                    <div class="nav__toggle" id="nav-toggle">
-                        <i class="ri-function-line"></i>
-                    </div>
-                </nav>
-            </header>
-        
-            <!-- HERO -->
-            <section class="home__section" id="home">
-                <div class="home__container container">
-                    <div class="home__data">
-                                <div class="home__img-container">
-                                    <img src="assets/img/croppedbah.jpeg" alt="" class="home__img">
-                                </div>
-                                <div class="home__header">
-                                    <h1 class="home__title">Bárbara Cardoso</h1>
-                                    <h2 class="home__subtitle">PSICÓLOGA CLÍNICA | CRP <span class="crp-no-link">12&#8203;/&#8203;20508</span></h2>
-                                    <div class="home__footer">
-                                        <h3 class="home__title-description">Te ajudo a ter uma vida com mais leveza, de forma autônoma, divertida e acolhedora.</h3>
-                                        <p class="home__description">Atendimento para adultos de forma online. A avaliação inicial é gratuita por até 30 minutos para você conhecer meu trabalho e receber um direcionamento de tratamento.</p>
-                                        <a href="https://wa.me/554797449114" class="button__hero button--flex" target="_blank">
-                                            <span class="button--flex">
-                                                <i class="ri-whatsapp-line button__icon"></i>Agende sua avaliação gratuita
-                                            </span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                    </div>
-                </section>
-        
+      <!-- HEADER -->
+      <header class="header" id="header">
+        <nav class="nav container">
+          <a href="#" class="nav__logo">
+            <img src="assets/img/logo-branca.png" alt="logo-nova" />
+          </a>
+
+          <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="#sobre" class="nav__link">Sobre mim</a>
+              </li>
+              <li class="nav__item">
+                <a href="#ajudar" class="nav__link">Como posso te ajudar?</a>
+              </li>
+              <li class="nav__item">
+                <a href="#depoimentos" class="nav__link">Depoimentos</a>
+              </li>
+              <li class="nav__item">
+                <a href="#faq" class="nav__link">FAQ</a>
+              </li>
+              <li class="nav__item">
+                <a
+                  href="https://wa.me/554797449114"
+                  class="button_nav button--flex"
+                  target="_blank"
+                >
+                  <i class="ri-whatsapp-line button__icon"></i> Entre em contato
+                </a>
+              </li>
+            </ul>
+            <div class="nav__close" id="nav-close">
+              <i class="ri-close-line"></i>
+            </div>
+          </div>
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="ri-function-line"></i>
+          </div>
+        </nav>
+      </header>
+
+      <!-- HERO -->
+      <section class="home__section" id="home">
+        <div class="home__container container">
+          <div class="home__data">
+            <div class="home__img-container">
+              <img src="assets/img/croppedbah.jpeg" alt="" class="home__img" />
+            </div>
+            <div class="home__header">
+              <h1 class="home__title">Bárbara Cardoso</h1>
+              <h2 class="home__subtitle">
+                PSICÓLOGA CLÍNICA | CRP
+                <span class="crp-no-link">12&#8203;/&#8203;20508</span>
+              </h2>
+              <div class="home__footer">
+                <h3 class="home__title-description">
+                  Te ajudo a ter uma vida com mais leveza, de forma autônoma,
+                  divertida e acolhedora.
+                </h3>
+                <p class="home__description">
+                  Atendimento para adultos de forma online. A avaliação inicial
+                  é gratuita por até 30 minutos para você conhecer meu trabalho
+                  e receber um direcionamento de tratamento.
+                </p>
+                <a
+                  href="https://wa.me/554797449114"
+                  class="button__hero button--flex"
+                  target="_blank"
+                >
+                  <span class="button--flex">
+                    <i class="ri-whatsapp-line button__icon"></i>Agende sua
+                    avaliação gratuita
+                  </span>
+                </a>
+                <a href="#book" class="button__secondary button--flex">
+                  <i class="ri-book-line button__icon"></i>Veja o livro
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!--=============== ABOUT ME ===============-->
+    <main>
+      <section class="about" id="sobre">
+        <div class="about__title">
+          <h2>SOBRE MIM</h2>
         </div>
 
-            
-        <!--=============== ABOUT ME ===============-->
-        <main>
-        <section class="about" id="sobre">
+        <div class="about__wrapper">
+          <div class="about__text about__text--main glass">
+            <p>
+              Descobri meu amor pela clínica durante os estágios da graduação
+              que me fizeram perceber que, ver o paciente conseguindo sair do
+              sofrimento, construir uma saúde mental sólida, autônoma e
+              autossuficiente é o encaixe perfeito da minha história em busca da
+              liberdade de Ser.
+            </p>
+          </div>
 
-            <div class="about__title">
-                <h2>SOBRE MIM</h2>
+          <div class="about__image">
+            <img src="assets/img/barbara-about.jpg" alt="about_img" />
+          </div>
+
+          <div class="about__text about__text--secondary glass">
+            <p>
+              Através de uma infância limitada eu aprendi a me perder em livros
+              de histórias fantasiosas, que me permitiam viver num mundo
+              paralelo onde eu era livre podendo sentir na pele a vida de cada
+              personagem de forma única. Isso me fez desenvolver uma habilidade
+              de atenção concentrada a ponto de abstrair todo e qualquer som,
+              movimento e coisas ao meu redor.
+            </p>
+          </div>
+
+          <div class="about__text about__text--thirth glass">
+            <p>
+              Então quando eu fui para os atendimentos clínicos percebi uma
+              semelhança, eu sai dos livros pra viver a história de cada
+              paciente de forma empática, extremamente compreensível pela
+              perspectiva do outro, sendo capaz de esquecer que existe um mundo
+              além da sessão naquele momento exato em que se compartilha uma
+              vida comigo, tornando cada sessão exclusiva e memorável.
+            </p>
+          </div>
+
+          <div class="about__quote">
+            <blockquote>
+              Eu vejo meus pacientes como perfeitos livros a serem lidos onde
+              descobrimos juntos o desfecho dessa história”
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <!--================ BOOK ==============-->
+      <section class="books section" id="livros">
+        <div class="container">
+          <div class="books__header approach__header">
+            <h2>MAS NEM TODA HISTÓRIA COMEÇA NA TERAPIA...</h2>
+          </div>
+
+          <div class="container">
+            <div class="container intro__card">
+              <p class="intro__subtitle">
+                Às vezes, o primeiro passo é aprender a se ler sozinho
+              </p>
+              <br />
+              <p class="intro__description">
+                Foi com esse olhar que criei o livro <b>O Começo</b>: um espaço
+                para você começar a escrever, entender e se encontrar na sua
+                própria história.
+              </p>
             </div>
+          </div>
 
-            <div class="about__wrapper">
+          <div class="books__container">
+            <div class="book__card glass">
+              <div class="book__carousel-wrapper">
+                <div class="book__carousel">
+                  <div class="book__carousel-slide">
+                    <img
+                      src="assets/img/capalivro.png"
+                      alt="Capa do Livro"
+                      class="book__img"
+                    />
+                  </div>
+                  <div class="book__carousel-slide">
+                    <img
+                      src="assets/img/Book1.png"
+                      alt="Capa do Livro"
+                      class="book__img"
+                    />
+                  </div>
+                  <div class="book__carousel-slide">
+                    <img
+                      src="assets/img/bookglasses.png"
+                      alt="Capa do Livro"
+                      class="book__img"
+                    />
+                  </div>
 
-                <div class="about__text about__text--main glass">
-                    <p>
-                        Descobri meu amor pela clínica durante os estágios da graduação que me fizeram perceber que, ver o paciente conseguindo sair do sofrimento, construir uma saúde mental sólida, autônoma e autossuficiente é o encaixe perfeito da minha história em busca da liberdade de Ser.
-                    </p>
-                </div>
-
-                <div class="about__image">
-                    <img src="assets/img/barbara-about.jpg" alt="about_img">
-                </div>
-
-                <div class="about__text about__text--secondary glass">
-                    <p>Através de uma infância limitada eu aprendi a me perder em livros de histórias fantasiosas, que me permitiam viver num mundo paralelo onde eu era livre podendo sentir na pele a vida de cada personagem de forma única. Isso me fez desenvolver uma habilidade de atenção concentrada a ponto de abstrair todo e qualquer som, movimento e coisas ao meu redor.</p>
-                </div>
-
-                <div class="about__text about__text--thirth glass">
-                    <p>
-                        Então quando eu fui para os atendimentos clínicos percebi uma semelhança, eu sai dos livros pra viver a história de cada paciente de forma empática, extremamente compreensível pela perspectiva do outro, sendo capaz de esquecer que existe um mundo além da sessão naquele momento exato em que se compartilha uma vida comigo, tornando cada sessão exclusiva e memorável.
-                    </p>
-                </div>
-
-                <div class="about__quote">
-                    <blockquote>
-                      Eu vejo meus pacientes como perfeitos livros a serem lidos onde descobrimos juntos o desfecho dessa história”
-                    </blockquote>
-                </div>
-              
-                </div>
-              
-        </section>
-
-        <!--=============== HELP YOU ===============-->
-        <section class="help " id="ajudar">
-            <div class="approach__header">
-                    <h2>COMO POSSO TE AJUDAR?</h2>
-            </div>
-            <div class="help__explain">
-                    <h4 class="help__subtitle">A psicoterapia possibilita a identificação e o enfrentamento de desafios emocionais e comportamentais, buscando alcançar equilíbrio emocional uma vida satisfatória. Durante nossas sessões, podemos abordar diversas questões, tais como:</h4>
-            </div>
-
-            <div class="container grid">
-                    <div class="help__data">
-                        <div class="card">
-                            <div class="card__inner">
-                                <div class="card__front">
-                                    <img src="assets/img/Group 102.png" alt="bipolar card">
-                                </div>
-                                <div class="card__back">
-                                    <h3>Transtorno Bipolar</h3>
-                                    <p>Tratamento especializado para mudanças de humor extremas.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card__inner">
-                                <div class="card__front">
-                                    <img src="assets/img/Group 97.png" alt="ansiedade card">
-                                </div>
-                                <div class="card__back">
-                                    <h3>Ansiedade</h3>
-                                    <p>Técnicas eficazes para controle da ansiedade e preocupações excessivas.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card__inner">
-                                <div class="card__front">
-                                    <img src="assets/img/Group 76.png" alt="TDAH card">
-                                </div>
-                                <div class="card__back">
-                                    <h3>TDAH / Falta de motivação</h3>
-                                    <p>Estratégias para melhorar foco, concentração e motivação.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card__inner">
-                                <div class="card__front">
-                                    <img src="assets/img/Group 99.png" alt="Baixa Autoestima card">
-                                </div>
-                                <div class="card__back">
-                                    <h3>Baixa Autoestima</h3>
-                                    <p>Desenvolvimento da confiança e amor próprio.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card__inner">
-                                <div class="card__front">
-                                    <img src="assets/img/Group 67.png" alt="Traumas card">
-                                </div>
-                                <div class="card__back">
-                                    <h3>Traumas</h3>
-                                    <p>Processamento seguro de experiências traumáticas.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card__inner">
-                                <div class="card__front">
-                                    <img src="assets/img/Group 101.png" alt="">
-                                </div>
-                                <div class="card__back">
-                                    <h3>Medos / Fobias</h3>
-                                    <p>Superação de medos limitantes e fobias específicas.</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-            </div>
-        </section>
-
-        <!--=============== CURRICULUM ===============-->     
-        <section class="curriculum " id="curriculum">
-
-                <div class="curriculum__container container">
-            
-                    <div class="curriculum__content">
-            
-                        <div class="curriculum__text glass">
-            
-                            <h2 class="section__title">Formação & Currículo</h2>
-            
-                            <p class="curriculum__description">
-                                Trabalho com a Terapia Baseada em Processos, uma abordagem focada na pessoa.
-                                Meu objetivo é compreender profundamente suas dores e te ajudar a construir
-                                novas possibilidades de enfrentamento, tornando visíveis padrões que hoje
-                                podem estar inconscientes.
-                            </p>
-            
-                            <ul class="curriculum__list">
-                                <li>Universidade Regional de Blumenau - FURB</li>
-                                <li>Pós em Terapia Cognitivo Comportamental</li>
-                                <li>Psicofarmacologia & Psicopatologia</li>
-                                <li>Certificada em Terapia Baseada em Processos</li>
-                                <li>Entusiasta da Neurociência</li>
-                            </ul>
-            
-                        </div>
-            
-                        <div class="curriculum__image">
-                            <img src="assets/img/barbara-curriculum.jpg" alt="Psicóloga Bárbara" class="curriculum__img">
-                        </div>
-            
-                    </div>
-            
-                </div>
-            
-        </section> 
-            
-        <!--=============== APPROACH ===============-->
-        <section class="approach">
-            <div class="approach__header">
-                    <h2>ABORDAGENS</h2>
-            </div>
-                
-            <div class="approach__content">
-                    <div class="approach__main">
-                        <p>Hoje minha atuação clínica é orientada pela Terapia Baseada em Processos (Process-Based Therapy), um modelo contemporâneo que prioriza a compreensão dos processos psicológicos que mantêm o sofrimento, em vez de focar apenas em diagnósticos.</p>
-                        
-                    </div>
-                
-                    <div class="approach__secondary">
-                        <p>O raciocínio clínico parte de uma formulação individualizada de caso, através de um Plano Terapêutico Singular (PTS) identificando padrões de funcionamento emocional, cognitivo, comportamental e relacional que sustentam o problema.</p><br>
-                        <p>A partir disso, as intervenções são escolhidas de forma estratégica, integrando técnicas baseadas em evidências (como TCC, ACT, DBT, Terapia da Autocompaixão, Terapia do Esquema Emocional, mindfulness e terapias contextuais), sempre com monitoramento contínuo do que funciona para cada pessoa, tornando o trabalho amplo entre passado, presente e futuro, bem como analisando profundamente cada aspecto que se interliga no mapa psicologico de cada pessoa singularmente.</p>
-                    </div>
-            </div>
-        </section>
-
-        <!--=============== TESTIMONIAL ===============-->
-        <section id="depoimentos" class="testimonials-section">
-
-                <div class="container">
-                  <h2 class="section-title">E o que dizem os pacientes?</h2>
-                  <p class="section-subtitle">Avaliações no Google</p>
-              
-                  <div class="carousel-wrapper">
-                    
-                    <button class="carousel-btn prev">&#10094;</button>
-              
-                    <div class="carousel-track-container">
-                        <div class="carousel-dots">
-                      <div class="carousel-track">
-              
-                        <!-- Card -->
-                        <div class="review-item">
-                          <p class="testimonial-text">
-                            A Bárbara é uma psicóloga excepcional, incrível com suas palavras,
-                            ensinamentos e cuidado. Faço terapia com ela há mais de um ano e meio
-                            e não consigo trocá-la por nada neste mundo. É uma profissional que
-                            indico de olhos fechados: ela é humana, amável e autêntica, sem
-                            frescura.
-                            A melhor profissional que já conheci.
-                          </p>
-                          <div class="testimonial-author">
-                            <div class="rating">★★★★★</div>
-                            <span>Paciente - Google</span>
-                          </div>
-                        </div>
-              
-                        <div class="review-item">
-                          <p class="testimonial-text">
-                            A Barbara é incrível, estou com ela a mais de um ano e não troco por
-                            ninguém, ela é extremamente atenciosa e soube identificar de primeira
-                            quais eram os pontos necessários tratar e me ajudou muito a melhorar a
-                            minha saúde mental, hoje eu sinto que sou outra pessoa. Ela trás ótimos
-                            pontos de reflexão além de eu me sentir extremamente acolhida, não é
-                            simplesmente sobre ouvir mas sim sobre me ajudar a lidar com as
-                            situações que eu levo para a terapia.
-                          </p>
-                          <div class="testimonial-author">
-                            <div class="rating">★★★★★</div>
-                            <span>Paciente - Google</span>
-                          </div>
-                        </div>
-              
-                        <div class="review-item">
-                          <p class="testimonial-text">
-                            Uma profissional incrível! Ela me ajudou (ainda me ajuda) a lidar com
-                            minha ansiedade de forma saudável. Sem dúvida, foi fundamental para que
-                            eu encarasse um dos momentos mais difíceis da minha vida de outra
-                            maneira. Hoje me sinto muito mais confiante e feliz, e o processo
-                            terapêutico fez toda a diferença. A Ba foi essencial nisso!
-                          </p>
-                          <div class="testimonial-author">
-                            <div class="rating">★★★★★</div>
-                            <span>Paciente - Google</span>
-                          </div>
-                        </div>
-              
-                        <div class="review-item">
-                          <p class="testimonial-text">
-                            Pisicóloga exelente! Logo na segunda sessão já conseguiu mudar o rumo da
-                            minha vida! Sempre muito respeitosa, atenta, acolhedora e prestativa! Se
-                            hoje eu sou uma pessoa mais tranquila foi porque ela segurou na minha
-                            mão em meio a tempestade e me ensinou a como passar por ela!
-                          </p>
-                          <div class="testimonial-author">
-                            <div class="rating">★★★★★</div>
-                            <span>Paciente - Google</span>
-                          </div>
-                        </div>
-              
-                      </div>
-                    </div>
-                    </div>
-              
-                    <button class="carousel-btn next">&#10095;</button>
-              
+                  <div class="book__carousel-slide">
+                    <img
+                      src="assets/img/book3.png"
+                      alt="Capa do Livro"
+                      class="book__img"
+                    />
+                  </div>
+                  <div class="book__carousel-slide">
+                    <img
+                      src="assets/img/book4.png"
+                      alt="Capa do Livro"
+                      class="book__img"
+                    />
+                  </div>
+                  <div class="book__carousel-slide">
+                    <img
+                      src="assets/img/bookwithcandle.png"
+                      alt="Capa do Livro"
+                      class="book__img"
+                    />
                   </div>
                 </div>
+                <span class="book__tag">Lançamento</span>
+              </div>
 
-                <!--Link para mais avaliações -->
-                <div class="reviews-link-container">
-                    <a href="https://maps.app.goo.gl/fg8TTH5hiDWhn9Hg7" class="reviews-link-button" target="_blank">
-                        <i class="ri-google-fill"></i>
-                        Ver mais avaliações no Google
-                    </a>
+              <div class="book__data">
+                <h3 class="book__title">O COMEÇO</h3>
+                <p class="book__description">
+                  Um livro-guia de autoconhecimento que te convida a ler e
+                  escrever para desacelerar, se escutar e organizar seus
+                  pensamentos e emoções com mais honestidade. Ele não substitui
+                  a terapia, mas pode ser um primeiro passo ou complemento no
+                  seu processo de autoconhecimento, ajudando a acessar partes
+                  suas que muitas vezes ficam ocultas.
+                </p>
+
+                <div class="book__buttons">
+                  <a
+                    href="https://go.hotmart.com/V105254158A"
+                    class="button_nav button--flex"
+                    target="_blank"
+                  >
+                    <i class="ri-book-line"></i> Livro Físico
+                  </a>
+                  <a
+                    href="https://go.hotmart.com/L104780046G"
+                    class="button__outline"
+                    target="_blank"
+                  >
+                    <i class="ri-tablet-line"></i> E-book (Digital)
+                  </a>
                 </div>
-
-                <!-- Redes sociais -->
-                <div class="social-media-section">
-                    <div class="social-media-content">
-                        <h4 class="social-title">Me encontre nas redes sociais para conteúdos sobre saúde mental e bem-estar</h4>
-                        <div class="social-networks">
-                            <a href="https://www.instagram.com/psi.barbaracardoso/" class="social-network-link instagram" target="_blank">
-                                <i class="ri-instagram-line"></i>
-                                <span>@psi.barbaracardoso</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-        </section>  
-
-        <!--=============== FAQ ===============-->
-        <section class=" section" id="faq">
-            <div class="faq__container">
-                        <div class="accordion">
-                        <div class="accordion-item">
-                            <div class="accordion-header">
-                                <span class="accordion-title">Como funciona a consulta online?</span>                         
-                            </div>
-                            <div class="accordion-content">
-                                <div class="accordion-content-inner">
-                                    <p>As consultas online são realizadas através de plataforma segura (Google Meet ou Zoom), com a mesma qualidade e eficácia do atendimento presencial. Você precisará apenas de um dispositivo com câmera, microfone e conexão estável com a internet. O ambiente deve ser privado e confortável para garantir a confidencialidade.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <div class="accordion-header">
-                                <span class="accordion-title">Quanto tempo dura cada sessão?</span>                         
-                            </div>
-                            <div class="accordion-content">
-                                <div class="accordion-content-inner">
-                                    <p>Cada sessão tem duração de aproximadamente 50 minutos. A avaliação inicial pode durar até 30 minutos gratuitamente, onde você poderá conhecer meu trabalho e receber um direcionamento inicial sobre o tratamento mais adequado para seu caso.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <div class="accordion-header">
-                                <span class="accordion-title">Qual a frequência recomendada das sessões?</span>                         
-                            </div>
-                            <div class="accordion-content">
-                                <div class="accordion-content-inner">
-                                    <p>Geralmente recomendo sessões semanais, mas a frequência pode variar conforme a necessidade de cada paciente e o momento do tratamento. Em alguns casos, podem ser necessárias sessões mais frequentes no início, espaçando gradualmente conforme a evolução.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <div class="accordion-header">
-                                <span class="accordion-title">A terapia é confidencial?</span>                         
-                            </div>
-                            <div class="accordion-content">
-                                <div class="accordion-content-inner">
-                                    <p>Sim, absolutamente. O sigilo profissional é garantido pelo Código de Ética Profissional do Psicólogo. Tudo o que for compartilhado durante as sessões permanece estritamente confidencial, exceto em situações de risco iminente à vida, conforme previsto em lei.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <div class="accordion-header">
-                                <span class="accordion-title">Como saber se preciso de terapia?</span>                         
-                            </div>
-                            <div class="accordion-content">
-                                <div class="accordion-content-inner">
-                                    <p>A terapia pode ajudar quando você sente que suas emoções, pensamentos ou comportamentos estão causando sofrimento ou interferindo na sua qualidade de vida. Sinais como ansiedade excessiva, tristeza persistente, dificuldades de relacionamento ou mudanças no sono e apetite podem indicar que é hora de buscar ajuda profissional.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <div class="accordion-header">
-                                <span class="accordion-title">Quanto tempo dura o tratamento?</span>                         
-                            </div>
-                            <div class="accordion-content">
-                                <div class="accordion-content-inner">
-                                    <p>O tempo de tratamento varia muito de pessoa para pessoa, dependendo da questão apresentada, dos objetivos estabelecidos e do envolvimento no processo terapêutico. Alguns casos podem mostrar melhorias em poucas sessões, enquanto outros podem necessitar de um acompanhamento mais longo. O importante é que você se sinta no controle do seu processo.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <div class="accordion-header">
-                                <span class="accordion-title">Aceita convênio médico?</span>                         
-                            </div>
-                            <div class="accordion-content">
-                                <div class="accordion-content-inner">
-                                    <p>Atualmente trabalho apenas com atendimento particular, o que permite maior flexibilidade de horários e atenção personalizada. Forneço recibos para reembolso junto ao seu convênio ou para desconto no Imposto de Renda. Entre em contato para saber mais sobre valores e formas de pagamento.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <div class="accordion-header">
-                                <span class="accordion-title">Como agendar uma consulta?</span>                         
-                            </div>
-                            <div class="accordion-content">
-                                <div class="accordion-content-inner">
-                                    <p>É muito simples! Entre em contato comigo pelo WhatsApp clicando no botão "Agende sua Consulta" ou me chame diretamente pelo número (47) 99744-9114. Respondo rapidamente e podemos conversar sobre seus objetivos e agendar sua avaliação gratuita de 30 minutos.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                </div>               
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        </main>
+      <!--=============== HELP YOU ===============-->
+      <section class="help" id="ajudar">
+        <div class="approach__header">
+          <h2>COMO POSSO TE AJUDAR?</h2>
+        </div>
+        <div class="help__explain">
+          <h4 class="help__subtitle">
+            A psicoterapia possibilita a identificação e o enfrentamento de
+            desafios emocionais e comportamentais, buscando alcançar equilíbrio
+            emocional uma vida satisfatória. Durante nossas sessões, podemos
+            abordar diversas questões, tais como:
+          </h4>
+        </div>
 
-        <!--=============== FOOTER ===============-->
-        <footer class="footer-section">
-            <div class="footer-container">
-                <div class="footer-content">
-                    <div class="footer-column">
-                        <div class="footer-brand">
-                            <img src="./assets/img/logo-branca.png" alt="Bárbara Cardoso" class="footer-logo">
-                            <p class="footer-description">
-                                Psicóloga Clínica especializada em Terapia Baseada em Processos.
-                                Atendimento humanizado e acolhedor.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="footer-column">
-                        <h5 class="footer-title">Contato</h5>
-                        <div class="footer-contact">
-                            <a href="https://wa.me/554797449114" class="footer-contact-link" target="_blank">
-                                <i class="ri-whatsapp-line"></i> Entre em contato
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="footer-column">
-                        <h5 class="footer-title">Me encontre também nas redes sociais</h5>
-                        <div class="footer-social-links">
-                            <a href="https://www.instagram.com/psi.barbaracardoso/" class="footer-social-link footer-social-link--extended" target="_blank" rel="noopener noreferrer" aria-label="Instagram @psi.barbaracardoso">
-                                <i class="ri-instagram-line"></i>
-                                <span class="footer-social-handle">@psi.barbaracardoso</span>
-                            </a>
-                        </div>
-                    </div>
+        <div class="container grid">
+          <div class="help__data">
+            <div class="card">
+              <div class="card__inner">
+                <div class="card__front">
+                  <img src="assets/img/Group 102.png" alt="bipolar card" />
                 </div>
-
-                <!-- Footer Bottom -->
-                <div class="footer-bottom">
-                    <p>&copy; 2026 Bárbara Cardoso - Psicóloga Clínica. Todos os direitos reservados.</p>
+                <div class="card__back">
+                  <h3>Transtorno Bipolar</h3>
+                  <p>
+                    Tratamento especializado para mudanças de humor extremas.
+                  </p>
                 </div>
+              </div>
             </div>
-        </footer>
 
-        <!--=============== SCROLL UP ===============-->
-        <a href="#" class="scrollup" id="scroll-up">
-            <i class="ri-arrow-up-s-line scrollup__icon"></i>
-        </a>
-        
-        <!--=============== SCROLL REVEAL ===============-->
-        <script src="https://unpkg.com/scrollreveal"></script>
+            <div class="card">
+              <div class="card__inner">
+                <div class="card__front">
+                  <img src="assets/img/Group 97.png" alt="ansiedade card" />
+                </div>
+                <div class="card__back">
+                  <h3>Ansiedade</h3>
+                  <p>
+                    Técnicas eficazes para controle da ansiedade e preocupações
+                    excessivas.
+                  </p>
+                </div>
+              </div>
+            </div>
 
-        <!--========== CARROUSEL =============-->
-        <!-- Ionicons removed (not used in this page) -->
+            <div class="card">
+              <div class="card__inner">
+                <div class="card__front">
+                  <img src="assets/img/Group 76.png" alt="TDAH card" />
+                </div>
+                <div class="card__back">
+                  <h3>TDAH / Falta de motivação</h3>
+                  <p>
+                    Estratégias para melhorar foco, concentração e motivação.
+                  </p>
+                </div>
+              </div>
+            </div>
 
-        <!--=============== MAIN JS ===============-->
-        <script src="assets/js/main.js"></script>
+            <div class="card">
+              <div class="card__inner">
+                <div class="card__front">
+                  <img
+                    src="assets/img/Group 99.png"
+                    alt="Baixa Autoestima card"
+                  />
+                </div>
+                <div class="card__back">
+                  <h3>Baixa Autoestima</h3>
+                  <p>Desenvolvimento da confiança e amor próprio.</p>
+                </div>
+              </div>
+            </div>
 
-    </body>
+            <div class="card">
+              <div class="card__inner">
+                <div class="card__front">
+                  <img src="assets/img/Group 67.png" alt="Traumas card" />
+                </div>
+                <div class="card__back">
+                  <h3>Traumas</h3>
+                  <p>Processamento seguro de experiências traumáticas.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card__inner">
+                <div class="card__front">
+                  <img src="assets/img/Group 101.png" alt="" />
+                </div>
+                <div class="card__back">
+                  <h3>Medos / Fobias</h3>
+                  <p>Superação de medos limitantes e fobias específicas.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--=============== CURRICULUM ===============-->
+      <section class="curriculum" id="curriculum">
+        <div class="curriculum__container container">
+          <div class="curriculum__content">
+            <div class="curriculum__text glass">
+              <h2 class="section__title">Formação & Currículo</h2>
+
+              <p class="curriculum__description">
+                Trabalho com a Terapia Baseada em Processos, uma abordagem
+                focada na pessoa. Meu objetivo é compreender profundamente suas
+                dores e te ajudar a construir novas possibilidades de
+                enfrentamento, tornando visíveis padrões que hoje podem estar
+                inconscientes.
+              </p>
+
+              <ul class="curriculum__list">
+                <li>Universidade Regional de Blumenau - FURB</li>
+                <li>Pós em Terapia Cognitivo Comportamental</li>
+                <li>Psicofarmacologia & Psicopatologia</li>
+                <li>Certificada em Terapia Baseada em Processos</li>
+                <li>Entusiasta da Neurociência</li>
+              </ul>
+            </div>
+
+            <div class="curriculum__image">
+              <img
+                src="assets/img/barbara-curriculum.jpg"
+                alt="Psicóloga Bárbara"
+                class="curriculum__img"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--=============== APPROACH ===============-->
+      <section class="approach">
+        <div class="approach__header">
+          <h2>ABORDAGENS</h2>
+        </div>
+
+        <div class="approach__content">
+          <div class="approach__main">
+            <p>
+              Hoje minha atuação clínica é orientada pela Terapia Baseada em
+              Processos (Process-Based Therapy), um modelo contemporâneo que
+              prioriza a compreensão dos processos psicológicos que mantêm o
+              sofrimento, em vez de focar apenas em diagnósticos.
+            </p>
+          </div>
+
+          <div class="approach__secondary">
+            <p>
+              O raciocínio clínico parte de uma formulação individualizada de
+              caso, através de um Plano Terapêutico Singular (PTS) identificando
+              padrões de funcionamento emocional, cognitivo, comportamental e
+              relacional que sustentam o problema.
+            </p>
+            <br />
+            <p>
+              A partir disso, as intervenções são escolhidas de forma
+              estratégica, integrando técnicas baseadas em evidências (como TCC,
+              ACT, DBT, Terapia da Autocompaixão, Terapia do Esquema Emocional,
+              mindfulness e terapias contextuais), sempre com monitoramento
+              contínuo do que funciona para cada pessoa, tornando o trabalho
+              amplo entre passado, presente e futuro, bem como analisando
+              profundamente cada aspecto que se interliga no mapa psicologico de
+              cada pessoa singularmente.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!--=============== TESTIMONIAL ===============-->
+      <section id="depoimentos" class="testimonials-section">
+        <div class="container">
+          <h2 class="section-title">E o que dizem os pacientes?</h2>
+          <p class="section-subtitle">Avaliações no Google</p>
+
+          <div class="carousel-wrapper">
+            <button class="carousel-btn prev">&#10094;</button>
+
+            <div class="carousel-track-container">
+              <div class="carousel-dots">
+                <div class="carousel-track">
+                  <!-- Card -->
+                  <div class="review-item">
+                    <p class="testimonial-text">
+                      A Bárbara é uma psicóloga excepcional, incrível com suas
+                      palavras, ensinamentos e cuidado. Faço terapia com ela há
+                      mais de um ano e meio e não consigo trocá-la por nada
+                      neste mundo. É uma profissional que indico de olhos
+                      fechados: ela é humana, amável e autêntica, sem frescura.
+                      A melhor profissional que já conheci.
+                    </p>
+                    <div class="testimonial-author">
+                      <div class="rating">★★★★★</div>
+                      <span>Paciente - Google</span>
+                    </div>
+                  </div>
+
+                  <div class="review-item">
+                    <p class="testimonial-text">
+                      A Barbara é incrível, estou com ela a mais de um ano e não
+                      troco por ninguém, ela é extremamente atenciosa e soube
+                      identificar de primeira quais eram os pontos necessários
+                      tratar e me ajudou muito a melhorar a minha saúde mental,
+                      hoje eu sinto que sou outra pessoa. Ela trás ótimos pontos
+                      de reflexão além de eu me sentir extremamente acolhida,
+                      não é simplesmente sobre ouvir mas sim sobre me ajudar a
+                      lidar com as situações que eu levo para a terapia.
+                    </p>
+                    <div class="testimonial-author">
+                      <div class="rating">★★★★★</div>
+                      <span>Paciente - Google</span>
+                    </div>
+                  </div>
+
+                  <div class="review-item">
+                    <p class="testimonial-text">
+                      Uma profissional incrível! Ela me ajudou (ainda me ajuda)
+                      a lidar com minha ansiedade de forma saudável. Sem dúvida,
+                      foi fundamental para que eu encarasse um dos momentos mais
+                      difíceis da minha vida de outra maneira. Hoje me sinto
+                      muito mais confiante e feliz, e o processo terapêutico fez
+                      toda a diferença. A Ba foi essencial nisso!
+                    </p>
+                    <div class="testimonial-author">
+                      <div class="rating">★★★★★</div>
+                      <span>Paciente - Google</span>
+                    </div>
+                  </div>
+
+                  <div class="review-item">
+                    <p class="testimonial-text">
+                      Pisicóloga exelente! Logo na segunda sessão já conseguiu
+                      mudar o rumo da minha vida! Sempre muito respeitosa,
+                      atenta, acolhedora e prestativa! Se hoje eu sou uma pessoa
+                      mais tranquila foi porque ela segurou na minha mão em meio
+                      a tempestade e me ensinou a como passar por ela!
+                    </p>
+                    <div class="testimonial-author">
+                      <div class="rating">★★★★★</div>
+                      <span>Paciente - Google</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button class="carousel-btn next">&#10095;</button>
+          </div>
+        </div>
+
+        <!--Link para mais avaliações -->
+        <div class="reviews-link-container">
+          <a
+            href="https://maps.app.goo.gl/fg8TTH5hiDWhn9Hg7"
+            class="reviews-link-button"
+            target="_blank"
+          >
+            <i class="ri-google-fill"></i>
+            Ver mais avaliações no Google
+          </a>
+        </div>
+
+        <!-- Redes sociais -->
+        <div class="social-media-section">
+          <div class="social-media-content">
+            <h4 class="social-title">
+              Me encontre nas redes sociais para conteúdos sobre saúde mental e
+              bem-estar
+            </h4>
+            <div class="social-networks">
+              <a
+                href="https://www.instagram.com/psi.barbaracardoso/"
+                class="social-network-link instagram"
+                target="_blank"
+              >
+                <i class="ri-instagram-line"></i>
+                <span>@psi.barbaracardoso</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--=============== FAQ ===============-->
+      <section class="section" id="faq">
+        <div class="faq__container">
+          <div class="accordion">
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <span class="accordion-title"
+                  >Como funciona a consulta online?</span
+                >
+              </div>
+              <div class="accordion-content">
+                <div class="accordion-content-inner">
+                  <p>
+                    As consultas online são realizadas através de plataforma
+                    segura (Google Meet ou Zoom), com a mesma qualidade e
+                    eficácia do atendimento presencial. Você precisará apenas de
+                    um dispositivo com câmera, microfone e conexão estável com a
+                    internet. O ambiente deve ser privado e confortável para
+                    garantir a confidencialidade.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <span class="accordion-title"
+                  >Quanto tempo dura cada sessão?</span
+                >
+              </div>
+              <div class="accordion-content">
+                <div class="accordion-content-inner">
+                  <p>
+                    Cada sessão tem duração de aproximadamente 50 minutos. A
+                    avaliação inicial pode durar até 30 minutos gratuitamente,
+                    onde você poderá conhecer meu trabalho e receber um
+                    direcionamento inicial sobre o tratamento mais adequado para
+                    seu caso.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <span class="accordion-title"
+                  >Qual a frequência recomendada das sessões?</span
+                >
+              </div>
+              <div class="accordion-content">
+                <div class="accordion-content-inner">
+                  <p>
+                    Geralmente recomendo sessões semanais, mas a frequência pode
+                    variar conforme a necessidade de cada paciente e o momento
+                    do tratamento. Em alguns casos, podem ser necessárias
+                    sessões mais frequentes no início, espaçando gradualmente
+                    conforme a evolução.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <span class="accordion-title">A terapia é confidencial?</span>
+              </div>
+              <div class="accordion-content">
+                <div class="accordion-content-inner">
+                  <p>
+                    Sim, absolutamente. O sigilo profissional é garantido pelo
+                    Código de Ética Profissional do Psicólogo. Tudo o que for
+                    compartilhado durante as sessões permanece estritamente
+                    confidencial, exceto em situações de risco iminente à vida,
+                    conforme previsto em lei.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <span class="accordion-title"
+                  >Como saber se preciso de terapia?</span
+                >
+              </div>
+              <div class="accordion-content">
+                <div class="accordion-content-inner">
+                  <p>
+                    A terapia pode ajudar quando você sente que suas emoções,
+                    pensamentos ou comportamentos estão causando sofrimento ou
+                    interferindo na sua qualidade de vida. Sinais como ansiedade
+                    excessiva, tristeza persistente, dificuldades de
+                    relacionamento ou mudanças no sono e apetite podem indicar
+                    que é hora de buscar ajuda profissional.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <span class="accordion-title"
+                  >Quanto tempo dura o tratamento?</span
+                >
+              </div>
+              <div class="accordion-content">
+                <div class="accordion-content-inner">
+                  <p>
+                    O tempo de tratamento varia muito de pessoa para pessoa,
+                    dependendo da questão apresentada, dos objetivos
+                    estabelecidos e do envolvimento no processo terapêutico.
+                    Alguns casos podem mostrar melhorias em poucas sessões,
+                    enquanto outros podem necessitar de um acompanhamento mais
+                    longo. O importante é que você se sinta no controle do seu
+                    processo.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <span class="accordion-title">Aceita convênio médico?</span>
+              </div>
+              <div class="accordion-content">
+                <div class="accordion-content-inner">
+                  <p>
+                    Atualmente trabalho apenas com atendimento particular, o que
+                    permite maior flexibilidade de horários e atenção
+                    personalizada. Forneço recibos para reembolso junto ao seu
+                    convênio ou para desconto no Imposto de Renda. Entre em
+                    contato para saber mais sobre valores e formas de pagamento.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <span class="accordion-title">Como agendar uma consulta?</span>
+              </div>
+              <div class="accordion-content">
+                <div class="accordion-content-inner">
+                  <p>
+                    É muito simples! Entre em contato comigo pelo WhatsApp
+                    clicando no botão "Agende sua Consulta" ou me chame
+                    diretamente pelo número (47) 99744-9114. Respondo
+                    rapidamente e podemos conversar sobre seus objetivos e
+                    agendar sua avaliação gratuita de 30 minutos.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--=============== FOOTER ===============-->
+    <footer class="footer-section">
+      <div class="footer-container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <div class="footer-brand">
+              <img
+                src="./assets/img/logo-branca.png"
+                alt="Bárbara Cardoso"
+                class="footer-logo"
+              />
+              <p class="footer-description">
+                Psicóloga Clínica especializada em Terapia Baseada em Processos.
+                Atendimento humanizado e acolhedor.
+              </p>
+            </div>
+          </div>
+
+          <div class="footer-column">
+            <h5 class="footer-title">Contato</h5>
+            <div class="footer-contact">
+              <a
+                href="https://wa.me/554797449114"
+                class="footer-contact-link"
+                target="_blank"
+              >
+                <i class="ri-whatsapp-line"></i> Entre em contato
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-column">
+            <h5 class="footer-title">Me encontre também nas redes sociais</h5>
+            <div class="footer-social-links">
+              <a
+                href="https://www.instagram.com/psi.barbaracardoso/"
+                class="footer-social-link footer-social-link--extended"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram @psi.barbaracardoso"
+              >
+                <i class="ri-instagram-line"></i>
+                <span class="footer-social-handle">@psi.barbaracardoso</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+          <p>
+            &copy; 2026 Bárbara Cardoso - Psicóloga Clínica. Todos os direitos
+            reservados.
+          </p>
+          <p>
+            Desenvolvido por
+            <a
+              href="https://www.linkedin.com/in/luanaschuler/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Luana Schüler</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!--=============== SCROLL UP ===============-->
+    <a href="#" class="scrollup" id="scroll-up">
+      <i class="ri-arrow-up-s-line scrollup__icon"></i>
+    </a>
+
+    <!--=============== SCROLL REVEAL ===============-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--========== CARROUSEL =============-->
+    <!-- Ionicons removed (not used in this page) -->
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
