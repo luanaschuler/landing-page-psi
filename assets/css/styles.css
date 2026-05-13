@@ -996,8 +996,16 @@ img {
 
   position: relative;
   width: 100%;
+  min-height: 400px; /* Adicione uma altura mínima compatível com suas imagens */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*=============== chat ===============*/
+  /* position: relative;
+  width: 100%;
   height: 100%;
-  overflow: hidden;
+  overflow: hidden; */
+  /*=============== original ===============*/
   /* position: relative;
   width: 250px;
   height: 350px;
@@ -1009,10 +1017,23 @@ img {
 .book__carousel-slide {
 
   position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  display: flex;
+  justify-content: center;
+
+  /*=============== chat ===============*/
+  /* position: absolute;
   inset: 0;
   opacity: 0;
   transition: opacity 0.6s ease;
-  pointer-events: none;
+  pointer-events: none; */
+
+  /*=============== original ===============*/
   /* position: absolute;
   width: 100%;
   height: 100%;
@@ -1025,7 +1046,7 @@ img {
 
 .book__carousel-slide.active {
   opacity: 1;
-  pointer-events: auto;
+  /* pointer-events: auto; */
   position: relative;
   /* opacity: 1; */
 }
