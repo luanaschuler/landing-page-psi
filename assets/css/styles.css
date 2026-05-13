@@ -686,6 +686,8 @@ img {
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   font-weight: 500;
+  position: relative;
+  z-index: 9999;
 }
 
 .button__secondary:hover {
