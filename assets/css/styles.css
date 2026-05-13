@@ -957,10 +957,6 @@ img {
   text-align: justify;
 }
 
-.intro__subtitle {
-  margin-bottom: 0.5rem;
-}
-
 .intro__description {
   margin-top: 0;
   font-size: 0.9rem;
@@ -1087,6 +1083,22 @@ img {
     padding: 2rem 1.5rem;
     text-align: center;
     gap: 2rem;
+  }
+
+  .intro__subtitle {
+    
+    margin-top: 1rem;
+    text-align: left;
+    margin-left: -1.5rem;
+    
+  }
+
+  .intro__description {
+    
+    margin-left: -2.7rem;
+    margin-bottom: 10px;
+    text-align: justify;
+    padding: 0; 
   }
 
   .book__carousel {
