@@ -367,7 +367,8 @@ document.addEventListener("DOMContentLoaded", function () {
 const bookCarousel = document.querySelector(".book__carousel");
 
 if (bookCarousel) {
-  const slides = document.querySelectorAll(".book__carousel-slide");
+  const slides = bookCarousel.querySelectorAll(".book__carousel-slide");
+  // const slides = document.querySelectorAll(".book__carousel-slide");
   let currentSlide = 0;
 
   function showSlide(index) {
