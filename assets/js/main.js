@@ -121,36 +121,7 @@ sr.reveal(`.testimonials-section`, { delay: 120, origin: "bottom" });
 sr.reveal(`.faq__container`, { delay: 90, origin: "bottom" });
 sr.reveal(`.footer-section`, { delay: 120, origin: "bottom" });
 
-/*=============== BOOK CAROUSEL ===============*/
 
-const bookCarousel = document.querySelector(".book__carousel");
-
-if (bookCarousel) {
-  const slides = bookCarousel.querySelectorAll(".book__carousel-slide");
-  // const slides = document.querySelectorAll(".book__carousel-slide");
-  let currentSlide = 0;
-
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      if (i === index) {
-        slide.classList.add("active");
-      } else {
-        slide.classList.remove("active");
-      }
-    });
-  }
-
-  function nextBookSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-  }
-
-  // Initialize with first slide
-  showSlide(0);
-
-  // Auto-cycle every 2 seconds
-  setInterval(nextBookSlide, 2000);
-}
 
 /*================= CAROUSEL ======================*/
 
@@ -392,5 +363,36 @@ document.addEventListener("DOMContentLoaded", function () {
   setupInfiniteLoop();
   startAutoplay();
 });
+
+/*=============== BOOK CAROUSEL ===============*/
+
+const bookCarousel = document.querySelector(".book__carousel");
+
+if (bookCarousel) {
+  const slides = bookCarousel.querySelectorAll(".book__carousel-slide");
+  // const slides = document.querySelectorAll(".book__carousel-slide");
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      if (i === index) {
+        slide.classList.add("active");
+      } else {
+        slide.classList.remove("active");
+      }
+    });
+  }
+
+  function nextBookSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  // Initialize with first slide
+  showSlide(0);
+
+  // Auto-cycle every 2 seconds
+  setInterval(nextBookSlide, 2000);
+}
 
 
